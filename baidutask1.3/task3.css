@@ -1,0 +1,55 @@
+.main{
+	background:#eee;
+	border: 1px solid #eee;
+	width: 1200px;
+	padding:20px; 
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.teamimg{
+	width: 80px;
+	height: 80px;
+}
+.left{
+	border: 1px solid #999;
+	width: 170px;
+	padding:20px;
+	background: white;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	
+}
+.left span{
+	position: absolute;
+	top: 20px;
+	left: 120px;
+}
+.mainbody{
+	position: absolute;
+	top: 20px;
+	left: 250px;
+	background: white;
+	border: 1px solid #999;
+	padding:20px;
+	margin-right: 160px;
+
+}
+.mainbody p{
+	margin-bottom: 15px;
+}
+.right{
+	float: right;
+	width: 80px;
+	padding:20px 20px 0;
+	background: white;
+	border: 1px solid #999;
+	margin-left: 20px;
+	
+}
+.right img{
+	margin-bottom: 20px;
+	width: 80px;
+	height: 80px;
+}
