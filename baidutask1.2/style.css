@@ -100,7 +100,9 @@ td{
 	margin-top:40px;
 	box-sizing: border-box;
 	padding: 30px 10px;
-	
+	border-color: #c0c0c0;
+	border-right-style: outset;
+	border-bottom-style: outset;
 }
 .cltable td{
 	border: 0px solid #999;
