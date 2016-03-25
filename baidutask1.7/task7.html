@@ -12,41 +12,43 @@
      		<span>新世界</span>
      	</div>
      	<ul>
-     		<li>首页</li>
-     		<li>最新活动</li>
-     		<li>项目介绍</li>
-     		<li>爱心社区</li>
-     		<li>关于我们</li>
-     		<li><img src="images/0.png">登陆</li>
+     		<li><a href="#" class="on">首页</a></li>
+     		<li><a href="#">最新活动</a></li>
+     		<li><a href="#">项目介绍</a></li>
+     		<li><a href="#">爱心社区</a></li>
+     		<li><a href="#">关于我们</a></li>
+     		<li><a href="#"><img src="images/0.png">登陆</a></li>
      	</ul>
     </header>
 
     <div class="part1">
     	<img src="images/1.jpg">
     	<div class="blackcover"></div>
-    	<span>Time of new life</span>
-    	<span>新时代，年轻的人们让我们一起</span>
-    	<span>体验新生活，享受新生活</span>
-    	<input type="button" value="开始体验"></input>
+    	<div class="blackcoverwords">
+	    	<p>Time of new life</p>
+	    	<span>新时代，年轻的人们让我们一起</span><br/>
+	    	<span>体验新生活，享受新生活</span><br/>
+	    	<input type="button" value="开始体验"></input>
+	    </div>
     </div>
 
     <div class="part2">
-    	<div class="part2.1">
+    	<div class="part201">
     		<img src="images/2.1.png">
     		<span>打造全新世界观，让你更爱你的生活</span>
     	</div>
 
-    	<div class="part2.2">
+    	<div>
     		<img src="images/2.2.png">
     		<span>丰富多彩的公益活动，发挥新世界的主人公意识</span>
     	</div>
 
-    	<div class="part2.3">
+    	<div>
     		<img src="images/2.3.png">
     		<span>时尚的新理念，超前体验未知的生活</span>
     	</div>
 
-    	<div class="part2.4">
+    	<div>
     		<img src="images/2.4.png">
     		<span>完善的培养机制，培养你全新的世界观</span>
     	</div>
@@ -54,14 +56,14 @@
 
     <div class="part3">
     	<img src="images/3.1+top.png">
-    	<span>关于新世界，你不知道的还有什么？</span>
+    	<p>关于新世界，你不知道的还有什么？</p>
     </div>
 
     <div class="part4">
     	<img src="images/4.jpg">
     	<div class="redcover"></div>
     	<p>查找新世界城市活动信息</p>
-    	       （不知是否需要留一个空给div）
+    	<div class="whitediv"></div>
     	<span>每个城市都有不同的活动信息，请自助查询您需要了解的城市</span>
     	<ul>
     		<li>
@@ -79,7 +81,7 @@
     				<option value="bj" selected="selected">北京市</option>
     				<option value="tj">天津市</option>
     				<option value="sh">上海市</option>
-    				<option value="cq">重庆市</option>
+    				<option value="cq" class="cq">重庆市</option>
     			</select>
     		</li>
     		<li>
@@ -91,6 +93,7 @@
     				<option value="dx">大兴区</option>
     			</select>
     		</li>
+
     		<li>
     			<input value="搜索" type="button"></input>
     		</li>
@@ -98,62 +101,69 @@
     </div>
 
     <div class="part5">
-    	<div class="part5.1">
-    		<img src="images/5.1.jpg">
-    		<p>北京活动</p>
-    		<span>新社区大联盟</span>
-    	</div>
+        <div class="alldiv">
+	    	<div>
+	    		<img src="images/5.1.jpg">
+	    		<p>北京活动</p>
+	    		<span>新社区大联盟</span>
+	    	</div>
 
-    	<div class="part5.2">
-    		<p>上海活动</p>
-    		<span>夜上海新景观探索</span>
-    		<img src="images/5.2.jpg">
-    	</div>
+	    	<div class="part502">
+	    		<p>上海活动</p>
+	    		<span>夜上海新景观探索</span>
+	    		<img src="images/5.2.jpg">
+	    	</div>
 
-    	<div class="part5.3">
-    		<img src="images/5.3.jpg">
-    		<p>深圳活动</p>
-    		<span>全新海岸线观点站</span>
-    	</div>
+	    	<div>
+	    		<img src="images/5.3.jpg">
+	    		<p>深圳活动</p>
+	    		<span>全新海岸线观点站</span>
+	    	</div>
 
-    	<div class="part5.4">
-    		<img src="images/5.4.jpg">
-    		<p>香港活动</p>
-    		<span>奢侈消费大派送</span>
-    	</div>
+	    	<div>
+	    		<img src="images/5.4.jpg">
+	    		<p>香港活动</p>
+	    		<span>奢侈消费大派送</span>
+	    	</div>
+	    </div>	
     </div>
     
     <div class="part6">
-    	<div class="part6.1">
+    	<div class="part601">
     		<img src="images/6.jpg">
-    		<p class="p6.1">新世界</p>
-    		<p class="p6.2">TIME</p>
-    		<p class="p6.3">@新世界 - 北京</p>
-    		<p class="p6.3">2016.04.01</p>
+    		<p class="p6011">新世界</p>
+    		<p class="p6012">TIME</p>
+    		<p class="p6013">@新世界 - 北京</p>
+    		<p class="p6014">2016.04.01</p>
     	</div>
 
-    	<div class="part6.2">
-    		<p>新世界/<span>01</span></p>
-    		<p>新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界</p>
+    	<div class="part602">
+    		<p class="p6021">新世界<span class="span60211">/</span><span class="span60212">01</span></p>
+    		<p class="p6022">新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界</p>
     		<input type="button" value="更多详情"></input>
-    		<div class="circle1"></div>
-    		<div class="circle2"></div>
-    		<div class="circle3"></div>
+    		<ul>
+    			<li><a href="#"></a></li>
+    			<li class="nobgcolor"><a href="#"></a></li>
+    			<li class="nobgcolor"><a href="#"></a></li>
+    		</ul>
+
     	</div>
     </div>
 
     <div class="part7">
-    	<div id="part7.1">
-    		<p>新时代<br/>关于爱生活的我们</p>
+    	<div class="part701">
+    		<p>新时代</p>
+    		<p>关于爱生活的我们</p>
     		<input type="button" value="查看更多"></input>
     	</div>
 
-    	<div id="part7.2">
-    		<p>新时代<br/>献给爱生活的你们</p>
+    	<div class="part702">
+    		<p>新时代</p>
+    		<p>献给爱生活的你们</p>
     		<input type="button" value="查看更多"></input>
     	</div>
 
-    	<div id="part7.3">
+    	<div class="part703">
     		<img src="images/7.jpg">
     	</div>
     </div>
