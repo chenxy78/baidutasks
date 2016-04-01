@@ -609,6 +609,9 @@ header a{
 .fifthpart .right5 table tr{
 	border:1px solid #ccc;
 }
+.fifthpart .right5 table tr:hover{
+	background-color: #eee;
+}
 .fifthpart .right5 table tr td:nth-child(1){
 	width: 30px;
 	border:1px solid #ccc;
