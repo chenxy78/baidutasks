@@ -227,8 +227,9 @@ header a{
 .firstpart .date{
     display: inline-block;
     margin-left: 32px;
-    position: relative;
-    top: -28px
+    position: absolute;
+    top: 13px;
+    right: 94px;
 }
 .date select{
 	width: 70px;
