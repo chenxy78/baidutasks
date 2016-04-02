@@ -157,23 +157,23 @@ header a{
     -o-transform:rotate(90deg);
 }
 
-.rightpart{
-
-	float: left;
-	width: 1000px;
-	margin-top: 55px;
-	position: relative;
-	padding: 50px 70px 155px 65px;
-}
-
-.rightpart .head{
+.head{
 	background-color: #fff;
 	padding:5px 0 5px 5px;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 55px;
+	left: 260px;
 	width: 100%;
 }
+.rightpart{
+	width: 1000px;
+	margin-top: 55px;
+	position: absolute;
+	top: 0;
+	left: 260px;
+	padding: 50px 70px 155px 65px;
+}
+
 .head input{
 	border-style: none;
 	width: 60px;
