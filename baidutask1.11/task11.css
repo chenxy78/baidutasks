@@ -1,0 +1,137 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background-color: #ccc;
+}
+header{
+	background-color: rgb(145,212,218);
+	color: #fff;
+	font-size: 20px;
+	padding: 15px 0;
+	position: relative;
+	padding-left: 15px;
+}
+header .span1{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 80px;
+}
+nav{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	background-color: #fff;
+}
+nav li{
+	float: left;
+	list-style: none;
+	flex-grow: 1;
+	font-size: 20px;
+	text-align: center;
+	padding: 15px 0;
+	cursor: pointer;
+}
+nav li:hover{
+	border-bottom: 3px solid rgb(145,212,218);
+}
+.part1{
+	background-color: #fff;
+}
+.part1 img{
+	width: 100%;
+}
+.part2{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	background-color: #fff;
+	padding: 15px 0;
+}
+.part2 a{
+	display: inline-block;
+	width: 20%;
+	flex-grow: 1;
+	text-decoration: none;
+	color: #000;
+	font-size: 18px;
+	text-align: center;
+}
+.part2 a img{
+	width: 80%;
+}
+
+.part3{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    background-color: #fff;
+    padding: 15px 0;
+    position: relative;
+
+
+}
+.gray1{
+	width: 90%;
+	height: 3px;
+	position: absolute;
+	top: 0;
+	margin-left: 5%;
+	background-color:#ccc;
+}
+.part3 div{
+    flex-grow: 1;
+
+}
+.part3 div img{
+	width: 100%;
+	
+}
+.part3 div h4{
+    width: 100%;
+	bottom: 0;
+	padding: 5px 0;
+	text-align: center;
+	font-weight: normal;
+}
+.part3 div h3{
+    width: 100%;
+	padding: 5px 0;
+	text-align: center;
+}
+.part4{
+	margin-top: 15px;
+	background-color: #fff;
+	padding: 0 15px 15px 15px;
+
+}
+.part4 h2{
+	color: #777;
+	padding: 5px 0;
+	border-bottom: 3px solid #ccc;
+}
+
+.part4 .divs{
+	margin-top: 15px;
+	display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+}
+.part4 .divs div{
+	flex-grow: 1;
+	width: 33.33333333%;
+}
+.part4 p{
+	width: 80%;
+	text-align: center;
+	margin: 15% 10%;
+	padding: 3% 5%;
+	background-color: #eee;
+}
+.part4 img{
+	border:1px solid rgb(255,183,49);
+	width: 100%;
+}
