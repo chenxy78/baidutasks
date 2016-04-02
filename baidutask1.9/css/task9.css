@@ -9,7 +9,7 @@ header{
 	width: 100%;
 	height: 55px;
 	background-color: rgb(33,137,191);
-	position: fixed;
+	position: absolute;
 	z-index: 100;
 	top: 0;
 }
