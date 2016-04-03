@@ -127,11 +127,59 @@ nav li:hover{
 .part4 p{
 	width: 80%;
 	text-align: center;
-	margin: 15% 10%;
-	padding: 3% 5%;
+	margin:5% 10%;
+	padding: 10% 5%;
 	background-color: #eee;
+}
+.part4 p.firstp{
+	margin-bottom: 15%;
 }
 .part4 img{
 	border:1px solid rgb(255,183,49);
 	width: 100%;
+}
+.part5{
+	background-color: #fff;
+	margin-top: 20px;
+	width: 100%;
+}
+.part5 .first5{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	padding: 15px 0 10px 15px;
+	width: 97%;
+	border-bottom: 1px solid #ccc;
+}
+
+.part5 .first5 div.first501{
+	width: 40%;
+}
+.part5 .first5 div.first501 img{
+	width: 100%;
+}
+.part5 .first5 div.first502{
+	padding-left: 20px;
+	position: relative;
+}
+div.first502 span{
+	color: #aaa;
+	position: absolute;
+	bottom: 0;
+}
+div.second5{
+	padding: 15px 0 10px 15px;
+	width: 97%;
+}
+div.second5 img{
+	width: 30%;
+}
+div.second5 p{
+	color: #aaa;
+	padding-top: 10px;
+	width: 80%;
+
+}
+div.second5 h2{
+	width: 80%;
 }
