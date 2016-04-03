@@ -28,6 +28,7 @@ nav{
 	display: flex;
 	display: -webkit-flex;
 	flex-direction: row;
+	flex-wrap: nowrap;
 	background-color: #fff;
 }
 nav li{
@@ -53,6 +54,7 @@ nav li:hover{
 	display: flex;
 	display: -webkit-flex;
 	flex-direction: row;
+	flex-wrap: nowrap;
 	background-color: #fff;
 	padding: 15px 0;
 }
@@ -73,6 +75,7 @@ nav li:hover{
     display: flex;
     display: -webkit-flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     background-color: #fff;
     padding: 15px 0;
     position: relative;
@@ -124,6 +127,7 @@ nav li:hover{
 	display: flex;
     display: -webkit-flex;
     flex-direction: row;
+    flex-wrap: nowrap;
 }
 .part4 .divs div{
 	flex-grow: 1;
@@ -152,6 +156,7 @@ nav li:hover{
 	display: flex;
 	display: -webkit-flex;
 	flex-direction: row;
+	flex-wrap: nowrap;
 	padding: 15px 0 10px 15px;
 	width: 97%;
 	border-bottom: 1px solid #ccc;
