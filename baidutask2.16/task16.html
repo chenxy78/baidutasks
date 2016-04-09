@@ -1,0 +1,86 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+  </head>
+<body>
+
+  <div>
+    <label>城市名称：<input id="aqi-city-input" type="text"></label><br>
+    <label>空气质量指数：<input id="aqi-value-input" type="text"></label><br>
+    <button id="add-btn">确认添加</button>
+  </div>
+  <table id="aqi-table">
+  
+    <tr>
+      <td>城市</td><td>空气质量</td><td>操作</td>
+    </tr>
+    <!--
+    <tr>
+      <td>北京</td><td>90</td><td><button>删除</button></td>
+    </tr>
+    <tr>
+      <td>北京</td><td>90</td><td><button>删除</button></td>
+    </tr>
+   -->
+  </table>
+<!--<script type="text/javascript">
+  var cities = document.getElementById("aqi-city-input");
+  var scores = document.getElementById("aqi-value-input");
+function add(){
+  if (cities.value){
+    var city = cities.value;
+      if(scores.value){
+        var score = scores.value;
+        addBtnHandle();
+      }
+    
+  }
+  else{
+    alert("请输入");
+  }
+}
+function addBtnHandle() {
+  
+   var table = document.getElementById('aqi-table'),
+       tr = document.createElement('tr'),
+       td1 = document.createElement('td'),
+       td2 = document.createElement('td'),
+       td3 = document.createElement('td'),
+       btn = document.createElement('button');
+
+       btn.innerHTML = '删除';
+
+       table.appendChild(tr);
+
+       td1.innerHTML = city;
+       tr.appendChild(td1);
+
+       td2.innerHTML = score;
+       tr.appendChild(td2);
+
+       td3.appendChild(btn);
+       btn.onclick=function(){
+        var main = this.parentNode.parentNode.parentNode;
+        main.removeChild(this.parentNode.parentNode);
+       }
+       tr.appendChild(td3);
+  
+}
+
+
+function init() {
+   var btn = document.getElementById("add-btn");
+   btn.onclick = function(){
+    add();
+   }
+}
+init();
+
+
+</script>
+-->
+<script src="task16.js"></script>
+</body>
+</html>
