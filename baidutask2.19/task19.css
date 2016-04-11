@@ -1,0 +1,17 @@
+ul{
+       list-style: none;
+       width:900px;
+}
+
+.li{
+       background-color: red;
+       color: #fff;
+       font-size: 20px;
+       text-align: center;
+       line-height: 20px;
+       float: left;
+       display: inline-block;
+       margin-left: 20px;
+       margin-top: 10px;
+       padding: 10px 20px;
+}
