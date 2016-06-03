@@ -4,6 +4,7 @@
 }
 body{
 	background-color: rgb(238,238,238);
+	min-width:1260px;
 }
 header{
 	width: 100%;
