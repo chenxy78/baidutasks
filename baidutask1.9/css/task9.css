@@ -7,7 +7,7 @@ body{
 	min-width:1260px;
 }
 header{
-	width: 100%;
+	width: 1260px;
 	height: 55px;
 	background-color: rgb(33,137,191);
 	position: absolute;
@@ -170,8 +170,8 @@ header a{
 	padding:5px 0 5px 5px;
 	position: absolute;
 	top: 55px;
-	left: 20%;
-	width: 80%;
+	left: 252px;
+	width: 1008px;
 	z-index: -1;
 }
 .head input{
