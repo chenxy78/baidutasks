@@ -176,7 +176,7 @@ header a{
 	header{
 		width: 1260px;
 	}
-	.header{
+	.head{
 		left: 252px;
 	        width: 1008px;
 	}
@@ -185,7 +185,7 @@ header a{
 	header{
 		width: 100%;
 	}
-	.header{
+	.head{
 		left: 20%;
 	        width: 80%;
 	}
