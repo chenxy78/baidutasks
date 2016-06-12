@@ -3,6 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>IFE JavaScript Task 01</title>
+    <style type="text/css">
+      #wrapper{
+        margin-top: 20px;
+        height: 500px;
+        position: relative;
+
+      }
+      #aqi-chart-wrap{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+
+    </style>
   </head>
 <body>
   <fieldset id="form-gra-time">
@@ -17,8 +35,10 @@
     <select id="city-select">
     </select>
   </fieldset>
-
-  <div id="aqi-chart-wrap">
+  
+  <div id = "wrapper">
+    <div id="aqi-chart-wrap">
+    </div>
   </div>
 </body>
 <script src="task17.js"></script>
