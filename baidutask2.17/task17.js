@@ -70,8 +70,17 @@ function selectedCity(){
     var options = document.getElementsByTagName('option');
     for (var i = 0; i < options.length;i++){
         if(options[i].selected)
-        pageState['nowSelectCity'] = i;
+          pageState['nowSelectCity'] = i;
     }
+    if(pageState['nowGraTime'] == 'day'){
+      dayChart(cities[pageState['nowSelectCity']]);
+    }
+    if(pageState['nowGraTime'] == 'week'){
+      weekChart(cities[pageState['nowSelectCity']]);
+    };
+    if(pageState['nowGraTime'] == 'month'){
+      monthChart(cities[pageState['nowSelectCity']]);
+    };
   }
 }
 
@@ -79,12 +88,15 @@ function ifChecked(){
   var inputs = document.getElementsByTagName('input');
     inputs[0].onclick = function(){
       pageState['nowGraTime'] = 'day';
+      dayChart(cities[pageState['nowSelectCity']]);
     };
     inputs[1].onclick = function(){
       pageState['nowGraTime'] = 'week';
+      weekChart(cities[pageState['nowSelectCity']]);
     };
     inputs[2].onclick = function(){
       pageState['nowGraTime'] = 'month';
+      monthChart(cities[pageState['nowSelectCity']]);
     };
 
 }
@@ -114,10 +126,11 @@ function selectColor(score){
 }
 
 function dayChart(selectedCity) {
-  colors.style.width = 910 + 'px';
+  colors.style.width = 910 + 'px';  //每个柱状图10px宽
   while(colors.hasChildNodes()){
     colors.removeChild(colors.firstChild);
-  }
+  }//清除全部图表
+
   for(var i in aqiSourceData[selectedCity]){
     var div = document.createElement('div');
     var color;
@@ -133,14 +146,16 @@ function dayChart(selectedCity) {
 }
 
 function monthChart(selectedCity){
-  colors.style.width = 150 + 'px';
+  colors.style.width = 150 + 'px'; //每个柱状图50px宽
   while(colors.hasChildNodes()){
     colors.removeChild(colors.firstChild);
   }//清除全部图表
-    var addFMonth = 0;
-    var addSMonth = 0;
-    var addTMonth = 0;
-    var score = [];
+
+  var addFMonth = 0;
+  var addSMonth = 0;
+  var addTMonth = 0;
+  var score = [];
+
   for(var i in aqiSourceData[selectedCity]){
     var fMonth = i.substring(5,7);
     if (fMonth == 01){
@@ -152,7 +167,8 @@ function monthChart(selectedCity){
     if (fMonth == 03){
       addTMonth += aqiSourceData[selectedCity][i];
     }
-
+  }
+   
     score.push(Math.round(addFMonth/31));
     score.push(Math.round(addSMonth/29));
     score.push(Math.round(addTMonth/31));
@@ -171,10 +187,64 @@ function monthChart(selectedCity){
       addNotice();
 
     }
+  
+}
+
+function weekChart(selectedCity){
+  colors.style.width = 420 + 'px';  //每个柱状图30px宽
+  while(colors.hasChildNodes()){
+    colors.removeChild(colors.firstChild);
+  }//清除全部图表
+
+  var color;
+  var score = [];
+  var fWeek = 0;
+  var lWeek = 0;
+  var mWeeks = [];
+  var mWeeksScore = 0;
+  var flag = 0;  //用于计算每7个数字相加
+  for(var i in aqiSourceData[selectedCity]){
+    var days = i.substring(8,10);
+    var months = i.substring(5,7);
+    if((days == 01 && months == 01) || (days == 02 && months == 01) || (days == 03 && months == 01)){
+     // if(months == 01){
+        fWeek += aqiSourceData[selectedCity][i];  // 第一周只有周五、周六、周日
+     // }
+    }
+    else if((days == 28 && months == 03) || (days == 29 && months == 03) || (days == 30 && months == 03) || (days == 31 && months == 03)){
+      //if(months == 03){
+        lWeek += aqiSourceData[selectedCity][i];  // 最后一周只有周一、周二、周三、周四
+     // } 
+    }
+    else{
+      mWeeksScore += aqiSourceData[selectedCity][i];
+      flag++;
+      if (flag == 7) {
+        mWeeks.push(Math.round(mWeeksScore/7));
+        flag = 0;
+        mWeeksScore = 0;
+      //  console.log(mWeeks);
+      }
+    }
+  }
+  
+  score.push(Math.round(fWeek/3));
+  score = score.concat(mWeeks);
+  score.push(Math.round(lWeek/4));
+
+  for(var i =0; i  < score.length;i++){
+    var div = document.createElement('div');
+    div.style.height = score[i] + 'px';
+    div.style.width = 30 + 'px';
+    div.style.display = 'inline-block';
+    color = selectColor(score[i]);
+    div.style.backgroundColor = color;
+    colors.appendChild(div);
+    addNotice();
   }
 }
 
-function addNotice(){
+function addNotice(){  //添加一个提示的框，显示数据是多少
   var divs = colors.getElementsByTagName('div');
   var notice = document.createElement('div');
   for(var i = 0; i < divs.length;i++){
@@ -183,36 +253,25 @@ function addNotice(){
       notice.style.width = 50 + 'px';
       notice.style.right = 10 + 'px';
       notice.style.top = 200 + 'px';
+      notice.style.border = '1px solid red';
       notice.innerHTML = parseInt(this.style.height);
       var body = document.getElementsByTagName('body')[0];
       body.appendChild(notice);
     }
     divs[i].onmouseout = function(){
-      notice.innerHTML = '';     
+      notice.innerHTML = '';  
+      notice.style.border = '0px solid red';
     }
   }
 }
 
-addCities();
-dayChart(cities[pageState['nowSelectCity']]);
-var legends = document.getElementsByTagName('legend');
-for(var i = 0 ; i < legends.length;i++){
-  legends[i].onclick = draw;
-}
+
 
 function draw(){
+  addCities();  //增加select中城市的选项
+  dayChart(cities[pageState['nowSelectCity']]);  //绘制初始状态下的图表
   selectedCity();  //获取select是否改变
   ifChecked();   //用这个来获取radio是否改变
-
-  if(pageState['nowGraTime'] == 'day'){
-    dayChart(cities[pageState['nowSelectCity']]);
-  }
-  if(pageState['nowGraTime'] == 'week'){
-
-  };
-  if(pageState['nowGraTime'] == 'month'){
-    monthChart(cities[pageState['nowSelectCity']]);
-  };
 }
-
+draw();
 
