@@ -152,8 +152,8 @@ function deleteValueAndBar(direction){
     }   
 }
 
-//冒泡排序
-function bubbleSort() {
+//用冒泡排序直接显示最终结果
+/*function bubbleSort() {
     var i = barsDivs.length;
     while (i > 0) {
         for (var j = 0; j < i - 1; j++) {
@@ -185,13 +185,79 @@ function bubbleSort() {
         m--;
     }
     
-}
+}*/
 
  function addRandomNumber(){
     var randomNumber = Math.floor(Math.random() * 90 + 10) + '';
     addValueAndBar(randomNumber,'right');//右侧添加 
     addNumber();
  }
+
+function bubbleSort(){
+    //柱形图的排序过程
+    var timerForBar;
+    var j = 0;
+    var i = barsDivs.length;
+
+    if(i > 0){
+        timerForBar = setInterval(function(){
+            if(j < i - 1){
+                var previousHeight = parseInt(barsDivs[j].style.height);
+                var afterHeight = parseInt(barsDivs[j + 1].style.height);
+
+                if(previousHeight > afterHeight){
+                    var exchange = barsDivs[j + 1];
+                    scoreBar.removeChild(barsDivs[j + 1]);
+                    scoreBar.insertBefore(exchange,barsDivs[j]);
+                }
+                j++;
+            }
+            else{
+                j = 0;
+                i--;
+            }
+        },1);
+    }
+    else{
+        clearInterval(timerForBar);
+    }
+
+    //div的排序过程
+    var timerForDiv;
+    var n = 0;
+    var m = lis.length;
+
+    if(m > 0){
+        timerForDiv = setInterval(function(){
+            if(n < m - 1){
+                var previousValue = lis[n].innerHTML;
+                var afterValue = lis[n + 1].innerHTML;
+
+                if(previousValue > afterValue){
+                    var exchange = lis[n + 1];
+                    ul.removeChild(lis[n + 1]);
+                    ul.insertBefore(exchange,lis[n]);
+                }
+                n++;
+            }
+            else{
+                n = 0;
+                m--;
+            }
+        },1);
+    }
+    else{
+        clearInterval(timerForDiv);
+    }
+}
+
+
+
+
+
+
+
+
 
 
 
