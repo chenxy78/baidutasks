@@ -21,7 +21,7 @@ ul{
        width:600px;
 }
 
-.li{
+li{
        text-align: center;
        height: 20px;
        line-height: 20px;
@@ -30,17 +30,11 @@ ul{
        margin-left: 20px;
        margin-top: 10px;
        padding: 10px 20px;
-       background-color: purple;
+}
+.li{
+       background-color: #F66;
 }
 .afterli{
-       text-align: center;
-       height: 20px;
-       line-height: 20px;
-       float: left;
-       display: inline-block;
-       margin-left: 20px;
-       margin-top: 10px;
-       padding: 10px 20px;
        background-color: black;
 }
 textarea{
